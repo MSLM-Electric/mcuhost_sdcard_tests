@@ -56,9 +56,6 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-extern DMA_HandleTypeDef hdma_sdmmc2_rx;
-extern DMA_HandleTypeDef hdma_sdmmc2_tx;
-extern SD_HandleTypeDef hsd2;
 extern TIM_HandleTypeDef htim3;
 
 /* USER CODE BEGIN EV */
@@ -215,48 +212,6 @@ void TIM3_IRQHandler(void)
   /* USER CODE BEGIN TIM3_IRQn 1 */
 
   /* USER CODE END TIM3_IRQn 1 */
-}
-
-/**
-  * @brief This function handles DMA2 stream0 global interrupt.
-  */
-void DMA2_Stream0_IRQHandler(void)
-{
-  /* USER CODE BEGIN DMA2_Stream0_IRQn 0 */
-
-  /* USER CODE END DMA2_Stream0_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_sdmmc2_rx);
-  /* USER CODE BEGIN DMA2_Stream0_IRQn 1 */
-
-  /* USER CODE END DMA2_Stream0_IRQn 1 */
-}
-
-/**
-  * @brief This function handles DMA2 stream5 global interrupt.
-  */
-void DMA2_Stream5_IRQHandler(void)
-{
-  /* USER CODE BEGIN DMA2_Stream5_IRQn 0 */
-
-  /* USER CODE END DMA2_Stream5_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_sdmmc2_tx);
-  /* USER CODE BEGIN DMA2_Stream5_IRQn 1 */
-
-  /* USER CODE END DMA2_Stream5_IRQn 1 */
-}
-
-/**
-  * @brief This function handles SDMMC2 global interrupt.
-  */
-void SDMMC2_IRQHandler(void)
-{
-  /* USER CODE BEGIN SDMMC2_IRQn 0 */
-
-  /* USER CODE END SDMMC2_IRQn 0 */
-  HAL_SD_IRQHandler(&hsd2);
-  /* USER CODE BEGIN SDMMC2_IRQn 1 */
-
-  /* USER CODE END SDMMC2_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */
